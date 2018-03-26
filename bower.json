@@ -1,0 +1,26 @@
+{
+  "name": "f1-friend",
+  "description": "A formula-1 firend.",
+  "main": "app.js",
+  "authors": [
+    "Rishab"
+  ],
+  "license": "CC",
+  "keywords": [
+    "F1"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.5",
+    "jQuery": "^3.2.1",
+    "angular-google-chart": "^0.1.0"
+  }
+}

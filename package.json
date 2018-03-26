@@ -1,0 +1,21 @@
+{
+  "name": "f1-friend-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rishab",
+  "license": "",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
+    "ergast-client": "^0.2.8",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "wikipedia-js": "0.0.6"
+  }
+}

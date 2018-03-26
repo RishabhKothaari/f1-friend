@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- angular material stylesheet -->
+    <link rel="stylesheet" href="\angular-material\angular-material.css">
+    <!-- load app css -->
+    <link rel="stylesheet" href="/app.css">
+    <!-- load css for lap charts -->
+    <link rel="stylesheet" href="/lap-chart.css">
+    <!-- load jquery-->
+    <script src="\jQuery\dist\jquery.js"></script>
+    <!-- angular js -->
+    <script src="\angular\angular.js"></script>
+    <!-- angular aria -->
+    <script src="\angular-aria\angular-aria.js"></script>
+    <!-- angular animate -->
+    <script src="\angular-animate\angular-animate.js"></script>
+    <!-- angular material -->
+    <script src="\angular-material\angular-material.js"></script>
+    <!-- am charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.0/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.0/themes/light.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.0/themes/chalk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.0/themes/black.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.0/themes/dark.js"></script>
+    <!-- jquery ajax libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/2.3.0/d3.min.js"></script>
+    <!-- client source -->
+    <script src="/app.js"></script>
+    <!-- app directives -->
+    <script src="/directives.js"></script>
+    <title>F1-Friend</title>
+</head>
+
+<body ng-app="f1-friend" layout="column" ng-cloak>
+    <md-toolbar>
+        <h1>Formula 1 - Friend</h1>
+    </md-toolbar>
+    <div flex layout="row" ng-controller="appCtrl">
+        <md-sidenav flex="15" layout="vertical" md-is-locked-open="true" class="md-whiteframe-z1">
+            <md-list flex layout="column">
+                <md-subheader class="md-no-sticky">Season Schedule</md-subheader>
+                <md-list-item class="md-3-line" ng-repeat="season in seasonsList" ng-click="displaySeason(season)">
+                    <div class="md-list-item-text">
+                        <span>{{season}}</span>
+                    </div>
+                </md-list-item>
+                <md-subheader class="md-no-sticky">Lap Chart</md-subheader>
+                <md-list-item class="md-3-line" ng-repeat="year in lapChartList" ng-click="revealLapChart(year)">
+                    <div class="md-list-item-text">
+                        <span>{{year}}</span>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <md-content flex id="content" ng-if="seasonSelected">
+            <h2>{{selected}}</h2>
+            <div>
+                <my-elem data="seasonData" chart-id="seasonsMap"></my-elem>
+            </div>
+        </md-content>
+        <md-content id="content" ng-if="lapChartSeleted" flex>
+                <div layout="row">
+                    <div flex></div>
+                        <md-input-container>
+                                <label>Rounds</label>
+                                <md-select ng-model="selectedRound" ng-change="displayLapChart(lapChartYear,selectedRound)">
+                                    <md-optgroup label="rounds">
+                                        <md-option ng-value="round" ng-repeat="round in rounds">Round - {{round}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                            </md-input-container>
+                </div>
+            <div id="chart" style="margin-top:60px;background-color: #000000;position:absolute;">
+                <lap-chart race-results="lapChartData"></lap-chart>
+            </div>
+            <div><span class="legend">M = mechanical failure | P = pit stop | X = accident | D = disqualified |</span></div>
+        </md-content>
+    </div>
+</body>
+
+</html>
