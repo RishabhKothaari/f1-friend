@@ -36,3 +36,6 @@ Lap chart draws a comparison between positions of each race driver during each l
 
 # Libraries
 Libraries used - Client end makes use of Angular Material, AngularJS web framework AmCharts and lap chart component is implemented with code from data analyst -  [Chris Pudney](http://www.vislives.com/2012/03/d3-lap-charts.html). The backend makes use of several npm packages to accomplish general tasks of server, in addition to this it also makes use of [Ergast client](https://github.com/davidor/ergast-client-nodejs) npm package as a wrapper to fetch data from Ergast.
+
+# LICENSE
+See Licencense file.
