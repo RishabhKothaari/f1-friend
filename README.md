@@ -4,10 +4,10 @@
 Formula1 -friend - a single page web application for Formula 1 fanatics to keep track of the race schedule and get insightful details on race weekend they missed. It makes use of data provided from Ergast Developer API’s to display the data.
 
 # Schedule
-![schedule] (https://github.com/rishii7/f1-friend/blob/master/images/schedule.png)
+![schedule](https://github.com/rishii7/f1-friend/blob/master/images/schedule.png "Schedule")
 
 # Lapcharts
-![lapcharts] (https://github.com/rishii7/f1-friend/blob/master/images/lapcharts.png)
+![lapcharts](https://github.com/rishii7/f1-friend/blob/master/images/lapcharts.png "Lapcharts")
 
 # Backend
 
