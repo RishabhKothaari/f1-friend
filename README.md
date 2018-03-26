@@ -42,4 +42,4 @@ Libraries used - Client end makes use of Angular Material, AngularJS web framewo
   2. [David Ortiz](https://github.com/davidor/ergast-client-nodejs)
 
 # LICENSE
-See Licencense file.
+See License file.
