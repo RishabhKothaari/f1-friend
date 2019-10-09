@@ -40,6 +40,9 @@ Libraries used - Client end makes use of Angular Material, AngularJS web framewo
 # Acknowledgement
   1. [Chris Pudney](http://www.vislives.com/2012/03/d3-lap-charts.html)
   2. [David Ortiz](https://github.com/davidor/ergast-client-nodejs)
+  
+# Live Deployment
+[Formula1 - Friend](https://formula1-friend.herokuapp.com/)
 
 # LICENSE
 See License file.
